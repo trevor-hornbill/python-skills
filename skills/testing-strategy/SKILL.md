@@ -96,6 +96,67 @@ For detailed patterns, see:
 | Fast | Unit tests < 100ms each |
 | Focused | Test behavior, not implementation |
 
+## Tests That Lie: Avoiding False-Green
+
+A passing suite is worthless if it can't fail when the code is wrong. The most
+expensive bugs ship under green CI. Audit for these anti-patterns — each one was
+found in real libraries where "all tests pass" masked broken behavior.
+
+**Conditional assertions that vacuously pass.** If the setup silently fails, a
+guarded assertion never runs and the test still passes.
+
+```python
+# BAD — if the Sphinx build fails, no index.html, so nothing is asserted.
+def test_build_includes_css():
+    if index_html.exists():            # build broke? test passes anyway.
+        assert "theme.css" in index_html.read_text()
+
+# GOOD — assert the precondition, then the behavior.
+def test_build_includes_css():
+    assert index_html.exists(), "build produced no index.html"
+    assert "theme.css" in index_html.read_text()
+```
+
+**Over-permissive assertions.** An `or` that can't fail, or a substring match so
+loose it accepts wrong output.
+
+```python
+assert result.returncode == 0 or "html_static_path" in result.stderr  # masks real failures
+assert "ui" in todo.tags                                              # also matches "build"
+```
+
+**Mocking the thing under test.** If you patch `_run_command` and only assert the
+argv tokens, the test locks in a command that may not exist. One MCP wrapper's
+suite was green while every CLI subcommand it built (`survivors`, `--rerun`) had
+been removed upstream. Mock at the boundary (the subprocess/HTTP call), then
+assert on the **parsed result**, not on the arguments you passed in.
+
+**Fakes that ignore the parameters being tested.** A `FakeClient.list_activities`
+that returns all canned rows in one call — ignoring `after` and pagination —
+cannot exercise sync-window or budget logic, so those stay unverified. Make fakes
+honor the parameters whose handling is the point of the test.
+
+**Smoke tests that import the wrong thing.** `python -c "import server"` printed
+success while resolving an empty `server/` package that shadowed the real
+`server.py` — the distributed wheel was broken. Assert a real symbol is reachable
+(`from server import main; main`), not merely that an import name resolves.
+
+**Forgotten mock → silent real network calls.** A test missing its `httpx_mock`
+fixture hits the live API: slow, flaky, rate-limited, and silently exercising
+nothing deterministic. Add `--disable-socket` (pytest-socket) so any unmocked
+network call fails loudly instead of "passing."
+
+**No-op CI gates.** Confirm the gate actually runs the tests:
+- `go test ./...` / `pytest` with **zero test files** is a green no-op.
+- Files excluded via `--ignore` or `pytest.mark.skip` "because flaky" often fail
+  *deterministically* — exclusion hides real breakage, not flakiness.
+- Marker filters (`-m "not integration"`) can deselect the only meaningful tests.
+  Reproduce CI's exact marker expression locally before trusting green.
+
+**Tests written around a bug.** Wrapping a call in `try/except RuinError` to make
+it pass documents the bug as acceptable. Assert the *correct* behavior and let it
+fail until the bug is fixed (use `xfail(strict=True)` to track it without red CI).
+
 ## Checklist
 
 ```

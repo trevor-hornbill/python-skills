@@ -104,9 +104,7 @@ from importlib.resources import files
 data = files("my_package.data").joinpath("file.json").read_text()
 ```
 
-For detailed templates, see:
-- **[PYPROJECT_FULL.md](PYPROJECT_FULL.md)** - Complete pyproject.toml
-- **[CONDA.md](CONDA.md)** - Conda packaging guide
+This fork keeps the packaging guidance self-contained in this skill instead of linking to separate pyproject and Conda reference files.
 
 ## Checklist
 

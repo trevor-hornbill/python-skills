@@ -1,0 +1,30 @@
+{
+  "name": "python-library-quality",
+  "version": "1.0.0",
+  "description": "Codex bundle for Python library security, performance, and API design reviews.",
+  "author": {
+    "name": "Trevor Hornbill",
+    "url": "https://github.com/trevor-hornbill"
+  },
+  "homepage": "https://github.com/trevor-hornbill/python-skills",
+  "repository": "https://github.com/trevor-hornbill/python-skills",
+  "license": "MIT",
+  "keywords": ["python", "library", "codex", "security", "performance", "api-design"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Python Library Quality",
+    "shortDescription": "Security, performance, and API design skills for Python libraries.",
+    "longDescription": "Focused Codex bundle for auditing Python libraries across security, performance, and API ergonomics.",
+    "developerName": "Trevor Hornbill",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/trevor-hornbill/python-skills",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Audit this Python library for security issues.",
+      "Profile this package and identify bottlenecks.",
+      "Review the public API for clarity and stability."
+    ]
+  }
+}

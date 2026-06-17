@@ -93,9 +93,7 @@ result = "".join(str(x) for x in items)  # Not += in loop
 | Insert | O(1) | O(1) | O(1) |
 | Delete | O(n) | O(1) | O(1) |
 
-For detailed strategies, see:
-- **[PROFILING.md](PROFILING.md)** - Advanced profiling techniques
-- **[BENCHMARKS.md](BENCHMARKS.md)** - CI benchmark regression testing
+This fork keeps the performance guidance self-contained in this skill instead of linking to separate profiling and benchmark reference files.
 
 ## Optimization Checklist
 

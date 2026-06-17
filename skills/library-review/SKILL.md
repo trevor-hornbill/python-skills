@@ -71,9 +71,7 @@ pip install bandit && bandit -r src/ # Security?
 2. [Medium priority action]
 ```
 
-For detailed checklists, see:
-- **[CHECKLIST.md](CHECKLIST.md)** - Full review checklist
-- **[REPORT_TEMPLATE.md](REPORT_TEMPLATE.md)** - Complete report template
+The checklist and report template in this file are the current bundled review references for this fork.
 
 ## Best Practices Checklist
 

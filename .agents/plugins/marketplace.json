@@ -1,0 +1,56 @@
+{
+  "name": "python-library-dev",
+  "interface": {
+    "displayName": "Python Library Dev"
+  },
+  "plugins": [
+    {
+      "name": "python-library-complete",
+      "source": {
+        "source": "local",
+        "path": "./plugins/python-library-complete"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "python-library-foundations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/python-library-foundations"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "python-library-distribution",
+      "source": {
+        "source": "local",
+        "path": "./plugins/python-library-distribution"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "python-library-quality",
+      "source": {
+        "source": "local",
+        "path": "./plugins/python-library-quality"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

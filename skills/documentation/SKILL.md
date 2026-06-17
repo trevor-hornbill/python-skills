@@ -99,9 +99,7 @@ python:
       extra_requirements: [docs]
 ```
 
-For detailed setup, see:
-- **[SPHINX_CONFIG.md](SPHINX_CONFIG.md)** - Full Sphinx configuration
-- **[TUTORIALS.md](TUTORIALS.md)** - Tutorial writing guide
+This fork keeps the documentation guidance self-contained in this skill instead of linking to separate Sphinx and tutorial reference files.
 
 ## Checklist
 

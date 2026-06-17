@@ -93,9 +93,7 @@ _MYCLI_COMPLETE=bash_source mycli > ~/.mycli-complete.bash
 _MYCLI_COMPLETE=zsh_source mycli > ~/.mycli-complete.zsh
 ```
 
-For detailed patterns, see:
-- **[CLICK_PATTERNS.md](CLICK_PATTERNS.md)** - Advanced Click usage
-- **[TYPER_GUIDE.md](TYPER_GUIDE.md)** - Typer alternative
+This fork keeps the CLI guidance self-contained in this skill instead of linking to separate Click and Typer reference files.
 
 ## CLI Checklist
 

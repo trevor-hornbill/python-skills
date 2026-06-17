@@ -1,0 +1,30 @@
+{
+  "name": "python-library-distribution",
+  "version": "1.0.0",
+  "description": "Codex bundle for packaging, CLI development, and Python release workflows.",
+  "author": {
+    "name": "Trevor Hornbill",
+    "url": "https://github.com/trevor-hornbill"
+  },
+  "homepage": "https://github.com/trevor-hornbill/python-skills",
+  "repository": "https://github.com/trevor-hornbill/python-skills",
+  "license": "MIT",
+  "keywords": ["python", "library", "codex", "packaging", "release", "cli"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Python Library Distribution",
+    "shortDescription": "Packaging, release, and CLI skills for Python libraries.",
+    "longDescription": "Focused Codex bundle for building CLIs, publishing Python packages, and managing releases.",
+    "developerName": "Trevor Hornbill",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/trevor-hornbill/python-skills",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Prepare this package for PyPI release.",
+      "Add a Click or Typer CLI to this library.",
+      "Set up versioning and release automation."
+    ]
+  }
+}

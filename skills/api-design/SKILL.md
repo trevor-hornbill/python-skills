@@ -89,9 +89,7 @@ def process(items: list = []):
 def process(items: list | None = None):
 ```
 
-For detailed patterns, see:
-- **[PATTERNS.md](PATTERNS.md)** - Builder, factory, and advanced patterns
-- **[EVOLUTION.md](EVOLUTION.md)** - API versioning and migration guides
+This fork keeps the API design guidance self-contained in this skill instead of linking to separate pattern and evolution reference files.
 
 ## Review Checklist
 

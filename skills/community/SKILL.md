@@ -99,9 +99,7 @@ jobs:
 - `help wanted` - Extra attention needed
 - `bug`, `enhancement`, `documentation`
 
-For detailed templates, see:
-- **[TEMPLATES.md](TEMPLATES.md)** - Full issue/PR templates
-- **[GOVERNANCE.md](GOVERNANCE.md)** - Project governance guide
+This fork keeps the issue templates and governance guidance inline in this skill instead of linking to separate reference files.
 
 ## Checklist
 

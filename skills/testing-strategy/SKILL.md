@@ -85,7 +85,7 @@ def test_invalid_raises():
 For detailed patterns, see:
 - **[FIXTURES.md](FIXTURES.md)** - Advanced fixture patterns
 - **[HYPOTHESIS.md](HYPOTHESIS.md)** - Property-based testing
-- **[CI.md](CI.md)** - CI/CD test configuration
+- CI/CD test configuration is covered inline in this skill and in the project setup references.
 
 ## Test Principles
 

@@ -1,68 +1,68 @@
 # Python Library Development Skills
 
-A comprehensive set of Claude Code skills for professional Python library development, based on the guide at [mcginniscommawill.com](https://mcginniscommawill.com/guides/python-library-development/).
+A Codex-oriented fork of the original Python library development skills, based on the guide at [mcginniscommawill.com](https://mcginniscommawill.com/guides/python-library-development/).
 
-## Installation
+## Codex Installation
 
-### Step 1: Add the Marketplace
+### Step 1: Add This Repository as a Codex Marketplace
 
-First, add this repository as a plugin marketplace in Claude Code:
+Clone the repository locally, then add the repo root as a marketplace:
 
-```
-/plugin marketplace add wdm0006/python-skills
+```bash
+git clone https://github.com/trevor-hornbill/python-skills.git
+cd python-skills
+codex plugin marketplace add .
 ```
 
 ### Step 2: Install a Plugin Bundle
 
-Install the complete skill set (recommended):
-
-```
-/plugin install python-library-complete@wdm0006-python-skills
-```
-
-Or install specific bundles based on your needs:
-
-```
-# Core skills for starting projects
-/plugin install python-library-foundations@wdm0006-python-skills
-
-# Skills for packaging and releasing
-/plugin install python-library-distribution@wdm0006-python-skills
-
-# Quality-focused skills (security, performance, API design)
-/plugin install python-library-quality@wdm0006-python-skills
-```
-
-### Alternative: Local Installation
-
-For project-specific installation, clone this repository and copy the skills you need:
+Install the complete bundle:
 
 ```bash
-# Clone the repository
-git clone https://github.com/wdm0006/python-skills.git
-
-# Copy skills to your project's .claude/skills/ directory
-mkdir -p .claude/skills
-cp -r python-skills/skills/* .claude/skills/
+codex plugin add python-library-complete@python-library-dev
 ```
 
-Or for global installation (available in all projects):
+Or install one of the focused bundles:
 
 ```bash
-# Copy to your personal Claude skills directory
-mkdir -p ~/.claude/skills
-cp -r python-skills/skills/* ~/.claude/skills/
+codex plugin add python-library-foundations@python-library-dev
+codex plugin add python-library-distribution@python-library-dev
+codex plugin add python-library-quality@python-library-dev
 ```
 
-### Verifying Installation
+### Alternative: Direct Skill Installation
 
-After installation, you can verify the skills are loaded by running:
+You can also use the skills without plugins by symlinking or copying them into a Codex skills directory:
 
+```bash
+mkdir -p .agents/skills
+cp -R skills/* .agents/skills/
 ```
-/plugin list
+
+For personal use across repositories:
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R skills/* ~/.agents/skills/
 ```
 
-> **Note:** Skills require Claude Code Pro, Max, Team, or Enterprise. Free tier users do not have access to Skills.
+### Updating the Plugin After Local Changes
+
+If you are iterating on the plugin locally after installation:
+
+```bash
+codex plugin marketplace add .
+codex plugin add python-library-complete@python-library-dev
+```
+
+Start a new Codex thread after reinstalling so the updated plugin metadata and skills are reloaded.
+
+## Repository Layout
+
+- `skills/` contains the reusable Codex skill folders.
+- `plugins/` contains the four Codex plugin bundles.
+- `.agents/plugins/marketplace.json` exposes the local marketplace used by `codex plugin marketplace add .`.
+- `.claude-plugin/marketplace.json` is retained as the upstream Claude-specific packaging reference.
 
 ## Available Skills
 

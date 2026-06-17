@@ -67,9 +67,7 @@ if not file_path.is_relative_to(base):
 - run: detect-secrets scan --all-files
 ```
 
-For detailed patterns, see:
-- **[VULNERABILITIES.md](VULNERABILITIES.md)** - Full vulnerability examples
-- **[CI_SECURITY.md](CI_SECURITY.md)** - Complete CI workflow
+Additional reference files for vulnerability catalogs and full CI workflows are not bundled in this fork yet. Use the inline patterns in this skill as the primary guidance.
 
 ## Audit Checklist
 

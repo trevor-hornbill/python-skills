@@ -1,0 +1,30 @@
+{
+  "name": "python-library-complete",
+  "version": "1.0.0",
+  "description": "Complete Codex bundle for professional Python library development workflows.",
+  "author": {
+    "name": "Trevor Hornbill",
+    "url": "https://github.com/trevor-hornbill"
+  },
+  "homepage": "https://github.com/trevor-hornbill/python-skills",
+  "repository": "https://github.com/trevor-hornbill/python-skills",
+  "license": "MIT",
+  "keywords": ["python", "library", "codex", "testing", "packaging", "quality"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Python Library Complete",
+    "shortDescription": "All Python library development skills in one Codex plugin.",
+    "longDescription": "Complete Codex bundle for setting up, reviewing, packaging, documenting, and releasing Python libraries.",
+    "developerName": "Trevor Hornbill",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/trevor-hornbill/python-skills",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Set up a new Python library with modern tooling.",
+      "Review this Python package for release readiness.",
+      "Add packaging, docs, testing, and CI guidance."
+    ]
+  }
+}

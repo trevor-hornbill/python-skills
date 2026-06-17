@@ -1,0 +1,30 @@
+{
+  "name": "python-library-foundations",
+  "version": "1.0.0",
+  "description": "Codex bundle for starting Python libraries with setup, quality, and testing workflows.",
+  "author": {
+    "name": "Trevor Hornbill",
+    "url": "https://github.com/trevor-hornbill"
+  },
+  "homepage": "https://github.com/trevor-hornbill/python-skills",
+  "repository": "https://github.com/trevor-hornbill/python-skills",
+  "license": "MIT",
+  "keywords": ["python", "library", "codex", "project-setup", "testing", "quality"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Python Library Foundations",
+    "shortDescription": "Setup, quality, and testing skills for new Python libraries.",
+    "longDescription": "Focused Codex bundle for initializing Python library projects and establishing code quality and test coverage.",
+    "developerName": "Trevor Hornbill",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/trevor-hornbill/python-skills",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Set up a new Python library with uv, ruff, and pytest.",
+      "Improve code quality and typing in this package.",
+      "Add a solid pytest strategy and CI basics."
+    ]
+  }
+}

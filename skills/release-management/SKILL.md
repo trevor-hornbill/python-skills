@@ -102,9 +102,7 @@ git push origin main --tags
 # 4. CI publishes automatically
 ```
 
-For detailed workflows, see:
-- **[AUTOMATION.md](AUTOMATION.md)** - Version bump scripts
-- **[MIGRATION.md](MIGRATION.md)** - Migration guide template
+This fork keeps the release workflow guidance self-contained in this skill instead of linking to separate automation and migration reference files.
 
 ## Checklist
 
